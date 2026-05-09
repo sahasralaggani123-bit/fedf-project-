@@ -1,0 +1,47 @@
+.search-module{
+
+    width:100%;
+
+    padding:30px;
+
+    text-align:center;
+}
+
+.search-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+}
+
+.search-box input{
+
+    width:350px;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    border:none;
+
+    background:rgba(255,255,255,0.08);
+
+    color:white;
+}
+
+.search-box button{
+
+    padding:18px 30px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#00e1ff;
+
+    color:black;
+
+    cursor:pointer;
+}
