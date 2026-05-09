@@ -1,71 +1,28 @@
-/* ========================================= */
-/* FLOATING ANIMATION */
-/* ========================================= */
-
-@keyframes floating{
-
-    0%{
-        transform:translateY(0px);
-    }
-
-    50%{
-        transform:translateY(-10px);
-    }
-
-    100%{
-        transform:translateY(0px);
-    }
+@keyframes floating {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(0, -18px, 0) scale(1.04); }
 }
 
-/* ========================================= */
-/* GLOW PULSE */
-/* ========================================= */
-
-@keyframes glowPulse{
-
-    0%{
-        box-shadow:0 0 5px cyan;
-    }
-
-    50%{
-        box-shadow:
-        0 0 20px cyan,
-        0 0 40px cyan;
-    }
-
-    100%{
-        box-shadow:0 0 5px cyan;
-    }
+@keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(56, 248, 167, 0.38), 0 0 16px rgba(56, 248, 167, 0.75); }
+    50% { box-shadow: 0 0 0 10px rgba(56, 248, 167, 0), 0 0 32px rgba(56, 248, 167, 0.95); }
 }
 
-/* ========================================= */
-/* FADE IN */
-/* ========================================= */
-
-@keyframes fadeIn{
-
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0px);
-    }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* ========================================= */
-/* ROTATE */
-/* ========================================= */
+@keyframes rotateSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
 
-@keyframes rotateSlow{
-
-    from{
-        transform:rotate(0deg);
-    }
-
-    to{
-        transform:rotate(360deg);
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
     }
 }
