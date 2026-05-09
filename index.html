@@ -1,0 +1,205 @@
+<!-- ========================================= -->
+<!-- index.html -->
+<!-- Predictive Baggage Tracking System -->
+<!-- ========================================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Smart Baggage Tracking</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- PARTICLES -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <link rel="stylesheet" href="modules/search/search.css">
+<link rel="stylesheet" href="modules/registration/registration.css">
+<link rel="stylesheet" href="modules/tracking/tracking.css">
+</head>
+
+<body>
+
+    <!-- ========================================= -->
+    <!-- PARTICLE BACKGROUND -->
+    <!-- ========================================= -->
+
+    <div id="particles-js"></div>
+
+    <!-- ========================================= -->
+    <!-- MAIN CONTAINER -->
+    <!-- ========================================= -->
+
+    <div class="main-container">
+
+        <!-- ========================================= -->
+        <!-- NAVBAR -->
+        <!-- ========================================= -->
+
+        <nav class="navbar">
+
+            <div class="logo">
+                ✈ SmartTrack
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tracking</a></li>
+                <li><a href="#">Prediction</a></li>
+                <li><a href="#">Risk</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+
+        </nav>
+
+        <!-- ========================================= -->
+        <!-- HERO SECTION -->
+        <!-- ========================================= -->
+
+        <section class="hero">
+
+            <!-- LEFT CONTENT -->
+
+            <div class="hero-left">
+
+                <h1 class="main-title">
+                    Predictive Baggage Tracking
+                </h1>
+
+                <p class="subtitle">
+                    Real-Time Tracking • Risk Analysis • Passenger Guidance
+                </p>
+
+                <!-- SEARCH AREA -->
+
+                <div class="search-container">
+
+                    <input type="text"
+                        id="bagInput"
+                        placeholder="Enter Baggage ID..." />
+
+                    <button id="trackBtn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Track Now
+                    </button>
+
+                </div>
+
+                <!-- QUICK INFO -->
+
+                <div class="info-cards">
+
+                    <div class="info-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h3>Live Tracking</h3>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <h3>Risk Alerts</h3>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <h3>AI Guidance</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+
+            <div class="hero-right">
+
+                <div class="glass-panel">
+
+                    <h2>Current Baggage Status</h2>
+
+                    <!-- RESULT CARD -->
+
+                    <div class="result-card" id="resultCard">
+
+                        <div class="status-header">
+
+                            <span class="status-dot"></span>
+
+                            <h3>In Transit</h3>
+
+                        </div>
+
+                        <div class="status-details">
+
+                            <p>
+                                <span>Bag ID:</span>
+                                BG1024
+                            </p>
+
+                            <p>
+                                <span>Flight:</span>
+                                AI-202
+                            </p>
+
+                            <p>
+                                <span>Location:</span>
+                                Dubai Transfer Hub
+                            </p>
+
+                            <p>
+                                <span>Estimated Arrival:</span>
+                                12:45 PM
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================================= -->
+
+    <script src="js/script.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/script.js"></script>
+<script src="js/search.js"></script>
+<script src="js/timeline.js"></script>
+<script src="js/prediction.js"></script>
+<script src="js/risk.js"></script>
+<script src="js/alerts.js"></script>
+<script src="js/notifications.js"></script>
+<script src="js/recommendation.js"></script>
+<script src="js/admin.js"></script>
+<script src="modules/search/search.js"></script>
+<script src="modules/registration/registration.js"></script>
+<script src="modules/tracking/tracking.js"></script>
+
+<script src="modules/prediction/prediction.js"></script>
+<script src="modules/risk/risk.js"></script>
+<script src="modules/alerts/alerts.js"></script>
+<script src="modules/lost/lost.js"></script>
+<script src="modules/notifications/notifications.js"></script>
+<script src="modules/recommendation/recommendation.js"></script>
+</body>
+
+</html>
