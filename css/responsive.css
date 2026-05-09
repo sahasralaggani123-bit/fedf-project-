@@ -1,0 +1,71 @@
+/* ========================================= */
+/* TABLET */
+/* ========================================= */
+
+@media(max-width:992px){
+
+    .hero{
+        flex-direction:column;
+        padding-top:40px;
+    }
+
+    .main-title{
+        font-size:50px;
+    }
+
+    .glass-panel{
+        width:100%;
+    }
+
+    .info-cards{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+}
+
+/* ========================================= */
+/* MOBILE */
+/* ========================================= */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .main-title{
+        font-size:38px;
+    }
+
+    .subtitle{
+        font-size:16px;
+    }
+
+    .search-container{
+        flex-direction:column;
+    }
+
+    .search-container button{
+        width:100%;
+        justify-content:center;
+    }
+
+    .info-cards{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .info-card{
+        width:100%;
+    }
+
+    .glass-panel{
+        padding:25px;
+    }
+}

@@ -1,0 +1,66 @@
+/* ========================================= */
+/* TIMELINE SECTION */
+/* ========================================= */
+
+.timeline-container{
+    width:100%;
+    margin-top:50px;
+}
+
+.timeline{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+
+    width:100%;
+    height:4px;
+
+    background:rgba(255,255,255,0.2);
+
+    top:50%;
+    left:0;
+
+    transform:translateY(-50%);
+}
+
+.timeline-step{
+    width:120px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+.timeline-circle{
+    width:60px;
+    height:60px;
+
+    background:#111827;
+
+    border:3px solid #00e1ff;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:auto;
+
+    color:#00e1ff;
+
+    font-size:22px;
+
+    box-shadow:
+    0 0 20px rgba(0,225,255,0.4);
+}
+
+.timeline-step h4{
+    margin-top:15px;
+    color:white;
+}

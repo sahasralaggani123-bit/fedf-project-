@@ -1,0 +1,57 @@
+/* ========================================= */
+/* RISK METER */
+/* ========================================= */
+
+.risk-container{
+    margin-top:50px;
+}
+
+.risk-card{
+    width:320px;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(15px);
+}
+
+/* ========================================= */
+/* RISK CIRCLE */
+/* ========================================= */
+
+.risk-circle{
+    width:180px;
+    height:180px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    border:10px solid #ff4444;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+
+    font-size:32px;
+    font-weight:bold;
+
+    box-shadow:
+    0 0 25px rgba(255,0,0,0.4);
+}
+
+.risk-label{
+    text-align:center;
+    margin-top:25px;
+
+    color:#ff6666;
+
+    font-size:22px;
+}

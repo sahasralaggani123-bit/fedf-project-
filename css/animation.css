@@ -1,0 +1,71 @@
+/* ========================================= */
+/* FLOATING ANIMATION */
+/* ========================================= */
+
+@keyframes floating{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* ========================================= */
+/* GLOW PULSE */
+/* ========================================= */
+
+@keyframes glowPulse{
+
+    0%{
+        box-shadow:0 0 5px cyan;
+    }
+
+    50%{
+        box-shadow:
+        0 0 20px cyan,
+        0 0 40px cyan;
+    }
+
+    100%{
+        box-shadow:0 0 5px cyan;
+    }
+}
+
+/* ========================================= */
+/* FADE IN */
+/* ========================================= */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+
+/* ========================================= */
+/* ROTATE */
+/* ========================================= */
+
+@keyframes rotateSlow{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
