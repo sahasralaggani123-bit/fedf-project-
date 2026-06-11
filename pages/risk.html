@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Risk AI | SmartTrack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/animation.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+    <div class="orb orb-one" aria-hidden="true"></div><div class="orb orb-two" aria-hidden="true"></div><div class="noise" aria-hidden="true"></div>
+    <nav class="navbar" aria-label="Primary navigation">
+        <a class="logo" href="../index.html"><span class="logo-mark"><i class="fa-solid fa-plane-departure"></i></span><span>SmartTrack</span></a>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <ul class="nav-links" id="navLinks"><li><a href="dashboard.html">Dashboard</a></li><li><a href="tracking.html">Tracking</a></li><li><a class="active" href="risk.html">Risk AI</a></li><li><a href="analytics.html">Analytics</a></li><li><a href="admin.html">Admin</a></li></ul>
+    </nav>
+    <main class="page-main">
+        <section class="section-shell page-header"><p class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Risk analyser</p><h1>Predict delay and mishandling risk.</h1><p class="hero-copy">The score combines delay minutes, transfer count, scan gaps and route complexity into a passenger-ready action plan.</p></section>
+        <section class="section-shell no-top-padding">
+            <div class="search-panel compact-search"><label for="bagInput">Baggage ID or flight number</label><div class="search-row"><input id="bagInput" type="text" placeholder="Try BG4096" /><button class="primary-btn" id="trackBtn" type="button"><i class="fa-solid fa-brain"></i> Calculate Risk</button></div><div class="quick-chips"><button type="button" data-bag="BG1024">BG1024</button><button type="button" data-bag="BG4096">BG4096</button><button type="button" data-bag="BG8192">BG8192</button></div></div>
+            <div class="risk-board page-risk-board">
+                <article class="risk-meter glass-card"><div class="meter-ring" id="meterRing"><span id="riskScore">0</span><small>/100</small></div><h3 id="riskLevel">Low Risk</h3><p id="riskReason">Search a baggage ID to calculate delay, transfer, scan, and route risk.</p></article>
+                <article class="recommendation-card glass-card"><div class="card-title"><i class="fa-solid fa-lightbulb"></i><h3>Passenger Guidance</h3></div><ul id="recommendations"></ul></article>
+                <div class="status-card glass-card" id="resultCard" aria-live="polite"></div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer"><span>© 2026 SmartTrack</span><span>Risk module</span></footer>
+    <script src="../js/app.js" defer></script>
+</body>
+</html>

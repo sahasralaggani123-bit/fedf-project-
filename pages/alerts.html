@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alerts | SmartTrack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/animation.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+    <div class="orb orb-one" aria-hidden="true"></div><div class="orb orb-two" aria-hidden="true"></div><div class="noise" aria-hidden="true"></div>
+    <nav class="navbar" aria-label="Primary navigation"><a class="logo" href="../index.html"><span class="logo-mark"><i class="fa-solid fa-plane-departure"></i></span><span>SmartTrack</span></a><button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button><ul class="nav-links" id="navLinks"><li><a href="dashboard.html">Dashboard</a></li><li><a href="tracking.html">Tracking</a></li><li><a href="risk.html">Risk AI</a></li><li><a href="analytics.html">Analytics</a></li><li><a class="active" href="alerts.html">Alerts</a></li></ul></nav>
+    <main class="page-main">
+        <section class="section-shell page-header"><p class="eyebrow"><i class="fa-solid fa-bell"></i> Alerts module</p><h1>Passenger and operations alerts.</h1><p class="hero-copy">See baggage delay warnings and create a mock passenger support ticket when a baggage issue needs escalation.</p></section>
+        <section class="section-shell split-section no-top-padding"><div class="alerts-panel glass-card"><div class="card-title"><i class="fa-solid fa-bell"></i><h3>Active Alerts</h3></div><div id="alertList" class="alert-list"></div></div><form class="lost-form glass-card" id="lostForm"><div class="section-heading compact"><p class="eyebrow"><i class="fa-solid fa-file-circle-exclamation"></i> Lost baggage module</p><h2>Generate support ticket</h2></div><label>Passenger Email<input id="passengerEmail" type="email" placeholder="passenger@example.com" required /></label><label>Bag ID<input id="lostBag" type="text" placeholder="BG1024" required /></label><label>Issue Notes<textarea id="lostNotes" rows="4" placeholder="Describe the baggage issue"></textarea></label><button class="primary-btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Submit Claim</button><p class="form-note" id="lostMessage" role="status"></p></form></section>
+    </main>
+    <footer class="footer"><span>© 2026 SmartTrack</span><span>Alerts module</span></footer>
+    <script src="../js/app.js" defer></script>
+</body>
+</html>

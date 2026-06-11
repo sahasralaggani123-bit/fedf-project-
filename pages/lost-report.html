@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lost Baggage Report | SmartTrack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/animation.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+    <div class="orb orb-one" aria-hidden="true"></div><div class="orb orb-two" aria-hidden="true"></div><div class="noise" aria-hidden="true"></div>
+    <nav class="navbar" aria-label="Primary navigation"><a class="logo" href="../index.html"><span class="logo-mark"><i class="fa-solid fa-plane-departure"></i></span><span>SmartTrack</span></a><button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button><ul class="nav-links" id="navLinks"><li><a href="dashboard.html">Dashboard</a></li><li><a href="tracking.html">Tracking</a></li><li><a href="risk.html">Risk AI</a></li><li><a href="alerts.html">Alerts</a></li><li><a href="admin.html">Admin</a></li></ul></nav>
+    <main class="page-main"><section class="section-shell page-header"><p class="eyebrow"><i class="fa-solid fa-file-circle-exclamation"></i> Lost baggage report</p><h1>Create a passenger support claim.</h1><p class="hero-copy">A dedicated page for collecting passenger contact information, baggage ID and issue notes.</p></section><section class="section-shell no-top-padding narrow-section"><form class="lost-form glass-card" id="lostForm"><label>Passenger Email<input id="passengerEmail" type="email" placeholder="passenger@example.com" required /></label><label>Bag ID<input id="lostBag" type="text" placeholder="BG1024" required /></label><label>Issue Notes<textarea id="lostNotes" rows="5" placeholder="Describe the baggage issue"></textarea></label><button class="primary-btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Submit Claim</button><p class="form-note" id="lostMessage" role="status"></p></form></section></main>
+    <footer class="footer"><span>© 2026 SmartTrack</span><span>Lost baggage module</span></footer>
+    <script src="../js/app.js" defer></script>
+</body>
+</html>

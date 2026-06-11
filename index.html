@@ -1,205 +1,87 @@
-<!-- ========================================= -->
-<!-- index.html -->
-<!-- Predictive Baggage Tracking System -->
-<!-- ========================================= -->
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Smart Baggage Tracking</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-
-    <!-- PARTICLES -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-    <link rel="stylesheet" href="modules/search/search.css">
-<link rel="stylesheet" href="modules/registration/registration.css">
-<link rel="stylesheet" href="modules/tracking/tracking.css">
+    <meta name="description" content="SmartTrack predicts airline baggage delay and loss risk with live tracking, alerts, analytics, and passenger guidance." />
+    <title>SmartTrack | Predictive Baggage & Risk Analyser</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animation.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
 </head>
-
 <body>
+    <div class="orb orb-one" aria-hidden="true"></div>
+    <div class="orb orb-two" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
 
-    <!-- ========================================= -->
-    <!-- PARTICLE BACKGROUND -->
-    <!-- ========================================= -->
-
-    <div id="particles-js"></div>
-
-    <!-- ========================================= -->
-    <!-- MAIN CONTAINER -->
-    <!-- ========================================= -->
-
-    <div class="main-container">
-
-        <!-- ========================================= -->
-        <!-- NAVBAR -->
-        <!-- ========================================= -->
-
-        <nav class="navbar">
-
-            <div class="logo">
-                ✈ SmartTrack
-            </div>
-
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Tracking</a></li>
-                <li><a href="#">Prediction</a></li>
-                <li><a href="#">Risk</a></li>
-                <li><a href="#">Support</a></li>
+    <header class="site-header compact-site" id="home">
+        <nav class="navbar" aria-label="Primary navigation">
+            <a class="logo" href="index.html" aria-label="SmartTrack home">
+                <span class="logo-mark"><i class="fa-solid fa-plane-departure"></i></span>
+                <span>SmartTrack</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="pages/dashboard.html">Dashboard</a></li>
+                <li><a href="pages/tracking.html">Tracking</a></li>
+                <li><a href="pages/risk.html">Risk AI</a></li>
+                <li><a href="pages/analytics.html">Analytics</a></li>
+                <li><a href="pages/admin.html">Admin</a></li>
             </ul>
-
         </nav>
 
-        <!-- ========================================= -->
-        <!-- HERO SECTION -->
-        <!-- ========================================= -->
-
-        <section class="hero">
-
-            <!-- LEFT CONTENT -->
-
-            <div class="hero-left">
-
-                <h1 class="main-title">
-                    Predictive Baggage Tracking
-                </h1>
-
-                <p class="subtitle">
-                    Real-Time Tracking • Risk Analysis • Passenger Guidance
+        <section class="hero section-shell home-hero">
+            <div class="hero-content reveal">
+                <p class="eyebrow"><i class="fa-solid fa-satellite-dish"></i> Predictive airline baggage intelligence</p>
+                <h1>Professional baggage tracking and risk analysis for airlines.</h1>
+                <p class="hero-copy">
+                    Monitor baggage movement, predict mishandling risk, alert passengers, and support operations teams with a clean multi-page control tower.
                 </p>
-
-                <!-- SEARCH AREA -->
-
-                <div class="search-container">
-
-                    <input type="text"
-                        id="bagInput"
-                        placeholder="Enter Baggage ID..." />
-
-                    <button id="trackBtn">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        Track Now
-                    </button>
-
+                <div class="home-actions">
+                    <a class="primary-btn" href="pages/tracking.html"><i class="fa-solid fa-magnifying-glass-location"></i> Track a Bag</a>
+                    <a class="secondary-btn" href="pages/dashboard.html"><i class="fa-solid fa-chart-simple"></i> View Dashboard</a>
                 </div>
-
-                <!-- QUICK INFO -->
-
-                <div class="info-cards">
-
-                    <div class="info-card">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <h3>Live Tracking</h3>
-                    </div>
-
-                    <div class="info-card">
-                        <i class="fa-solid fa-triangle-exclamation"></i>
-                        <h3>Risk Alerts</h3>
-                    </div>
-
-                    <div class="info-card">
-                        <i class="fa-solid fa-lightbulb"></i>
-                        <h3>AI Guidance</h3>
-                    </div>
-
+                <div class="metric-strip" aria-label="System summary metrics">
+                    <article><strong id="trackedCount">0</strong><span>Bags monitored</span></article>
+                    <article><strong id="safeRate">0%</strong><span>Low risk rate</span></article>
+                    <article><strong id="avgDelay">0m</strong><span>Average delay</span></article>
                 </div>
-
             </div>
 
-            <!-- RIGHT SIDE -->
-
-            <div class="hero-right">
-
-                <div class="glass-panel">
-
-                    <h2>Current Baggage Status</h2>
-
-                    <!-- RESULT CARD -->
-
-                    <div class="result-card" id="resultCard">
-
-                        <div class="status-header">
-
-                            <span class="status-dot"></span>
-
-                            <h3>In Transit</h3>
-
-                        </div>
-
-                        <div class="status-details">
-
-                            <p>
-                                <span>Bag ID:</span>
-                                BG1024
-                            </p>
-
-                            <p>
-                                <span>Flight:</span>
-                                AI-202
-                            </p>
-
-                            <p>
-                                <span>Location:</span>
-                                Dubai Transfer Hub
-                            </p>
-
-                            <p>
-                                <span>Estimated Arrival:</span>
-                                12:45 PM
-                            </p>
-
-                        </div>
-
+            <div class="hero-visual reveal delay-1" aria-label="Live baggage operations dashboard preview">
+                <div class="radar-card glass-card">
+                    <div class="radar-header"><span>Live risk radar</span><strong id="radarRisk">LOW</strong></div>
+                    <div class="radar-screen">
+                        <div class="radar-sweep"></div>
+                        <span class="radar-dot dot-a"></span><span class="radar-dot dot-b"></span><span class="radar-dot dot-c"></span>
+                        <i class="fa-solid fa-suitcase-rolling suitcase-icon"></i>
                     </div>
-
                 </div>
-
+                <div class="status-card glass-card" id="resultCard" aria-live="polite"></div>
             </div>
-
         </section>
+    </header>
 
-    </div>
+    <main>
+        <section class="section-shell module-overview">
+            <div class="section-heading reveal">
+                <p class="eyebrow"><i class="fa-solid fa-layer-group"></i> Project modules</p>
+                <h2>Separated pages for a cleaner, more professional application flow.</h2>
+            </div>
+            <div class="feature-grid reveal delay-1">
+                <a class="module-card glass-card" href="pages/dashboard.html"><i class="fa-solid fa-gauge-high"></i><h3>Dashboard</h3><p>KPI cards, risk summary, analytics and recent alerts.</p></a>
+                <a class="module-card glass-card" href="pages/tracking.html"><i class="fa-solid fa-location-crosshairs"></i><h3>Live Tracking</h3><p>Search baggage IDs or flights and view current bag details.</p></a>
+                <a class="module-card glass-card" href="pages/risk.html"><i class="fa-solid fa-shield-halved"></i><h3>Risk AI</h3><p>Calculate risk score and passenger guidance from operations signals.</p></a>
+                <a class="module-card glass-card" href="pages/analytics.html"><i class="fa-solid fa-chart-line"></i><h3>Analytics</h3><p>Status distribution and operational baggage performance.</p></a>
+                <a class="module-card glass-card" href="pages/alerts.html"><i class="fa-solid fa-bell"></i><h3>Alerts</h3><p>Delay, exception, and high-risk baggage notifications.</p></a>
+                <a class="module-card glass-card" href="pages/admin.html"><i class="fa-solid fa-user-gear"></i><h3>Admin</h3><p>Update baggage status and simulate operations changes.</p></a>
+            </div>
+        </section>
+    </main>
 
-    <!-- ========================================= -->
-    <!-- JAVASCRIPT -->
-    <!-- ========================================= -->
-
-    <script src="js/script.js"></script>
-<script src="js/particles.js"></script>
-<script src="js/script.js"></script>
-<script src="js/search.js"></script>
-<script src="js/timeline.js"></script>
-<script src="js/prediction.js"></script>
-<script src="js/risk.js"></script>
-<script src="js/alerts.js"></script>
-<script src="js/notifications.js"></script>
-<script src="js/recommendation.js"></script>
-<script src="js/admin.js"></script>
-<script src="modules/search/search.js"></script>
-<script src="modules/registration/registration.js"></script>
-<script src="modules/tracking/tracking.js"></script>
-
-<script src="modules/prediction/prediction.js"></script>
-<script src="modules/risk/risk.js"></script>
-<script src="modules/alerts/alerts.js"></script>
-<script src="modules/lost/lost.js"></script>
-<script src="modules/notifications/notifications.js"></script>
-<script src="modules/recommendation/recommendation.js"></script>
+    <footer class="footer"><span>© 2026 SmartTrack Baggage Intelligence</span><span>Predictive tracking • Risk analysis • Passenger care</span></footer>
+    <script src="js/app.js" defer></script>
 </body>
-
 </html>
