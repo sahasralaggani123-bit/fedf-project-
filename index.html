@@ -6,82 +6,17 @@
     <meta name="description" content="SmartTrack predicts airline baggage delay and loss risk with live tracking, alerts, analytics, and passenger guidance." />
     <title>SmartTrack | Predictive Baggage & Risk Analyser</title>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://unpkg.com" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animation.css" />
     <link rel="stylesheet" href="css/responsive.css" />
 </head>
-<body>
-    <div class="orb orb-one" aria-hidden="true"></div>
-    <div class="orb orb-two" aria-hidden="true"></div>
-    <div class="noise" aria-hidden="true"></div>
-
-    <header class="site-header compact-site" id="home">
-        <nav class="navbar" aria-label="Primary navigation">
-            <a class="logo" href="index.html" aria-label="SmartTrack home">
-                <span class="logo-mark"><i class="fa-solid fa-plane-departure"></i></span>
-                <span>SmartTrack</span>
-            </a>
-            <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="pages/dashboard.html">Dashboard</a></li>
-                <li><a href="pages/tracking.html">Tracking</a></li>
-                <li><a href="pages/risk.html">Risk AI</a></li>
-                <li><a href="pages/analytics.html">Analytics</a></li>
-                <li><a href="pages/admin.html">Admin</a></li>
-            </ul>
-        </nav>
-
-        <section class="hero section-shell home-hero">
-            <div class="hero-content reveal">
-                <p class="eyebrow"><i class="fa-solid fa-satellite-dish"></i> Predictive airline baggage intelligence</p>
-                <h1>Professional baggage tracking and risk analysis for airlines.</h1>
-                <p class="hero-copy">
-                    Monitor baggage movement, predict mishandling risk, alert passengers, and support operations teams with a clean multi-page control tower.
-                </p>
-                <div class="home-actions">
-                    <a class="primary-btn" href="pages/tracking.html"><i class="fa-solid fa-magnifying-glass-location"></i> Track a Bag</a>
-                    <a class="secondary-btn" href="pages/dashboard.html"><i class="fa-solid fa-chart-simple"></i> View Dashboard</a>
-                </div>
-                <div class="metric-strip" aria-label="System summary metrics">
-                    <article><strong id="trackedCount">0</strong><span>Bags monitored</span></article>
-                    <article><strong id="safeRate">0%</strong><span>Low risk rate</span></article>
-                    <article><strong id="avgDelay">0m</strong><span>Average delay</span></article>
-                </div>
-            </div>
-
-            <div class="hero-visual reveal delay-1" aria-label="Live baggage operations dashboard preview">
-                <div class="radar-card glass-card">
-                    <div class="radar-header"><span>Live risk radar</span><strong id="radarRisk">LOW</strong></div>
-                    <div class="radar-screen">
-                        <div class="radar-sweep"></div>
-                        <span class="radar-dot dot-a"></span><span class="radar-dot dot-b"></span><span class="radar-dot dot-c"></span>
-                        <i class="fa-solid fa-suitcase-rolling suitcase-icon"></i>
-                    </div>
-                </div>
-                <div class="status-card glass-card" id="resultCard" aria-live="polite"></div>
-            </div>
-        </section>
-    </header>
-
-    <main>
-        <section class="section-shell module-overview">
-            <div class="section-heading reveal">
-                <p class="eyebrow"><i class="fa-solid fa-layer-group"></i> Project modules</p>
-                <h2>Separated pages for a cleaner, more professional application flow.</h2>
-            </div>
-            <div class="feature-grid reveal delay-1">
-                <a class="module-card glass-card" href="pages/dashboard.html"><i class="fa-solid fa-gauge-high"></i><h3>Dashboard</h3><p>KPI cards, risk summary, analytics and recent alerts.</p></a>
-                <a class="module-card glass-card" href="pages/tracking.html"><i class="fa-solid fa-location-crosshairs"></i><h3>Live Tracking</h3><p>Search baggage IDs or flights and view current bag details.</p></a>
-                <a class="module-card glass-card" href="pages/risk.html"><i class="fa-solid fa-shield-halved"></i><h3>Risk AI</h3><p>Calculate risk score and passenger guidance from operations signals.</p></a>
-                <a class="module-card glass-card" href="pages/analytics.html"><i class="fa-solid fa-chart-line"></i><h3>Analytics</h3><p>Status distribution and operational baggage performance.</p></a>
-                <a class="module-card glass-card" href="pages/alerts.html"><i class="fa-solid fa-bell"></i><h3>Alerts</h3><p>Delay, exception, and high-risk baggage notifications.</p></a>
-                <a class="module-card glass-card" href="pages/admin.html"><i class="fa-solid fa-user-gear"></i><h3>Admin</h3><p>Update baggage status and simulate operations changes.</p></a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer"><span>© 2026 SmartTrack Baggage Intelligence</span><span>Predictive tracking • Risk analysis • Passenger care</span></footer>
+<body data-page="home">
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" defer></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" defer></script>
+    <script src="js/react-fallback.js" defer></script>
     <script src="js/app.js" defer></script>
 </body>
 </html>

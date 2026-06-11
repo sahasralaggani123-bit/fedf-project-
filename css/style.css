@@ -817,3 +817,8 @@ textarea:focus {
 .page-risk-board .status-card {
     grid-column: 1 / -1;
 }
+
+.error-note {
+    color: var(--red);
+    margin-top: 12px;
+}
