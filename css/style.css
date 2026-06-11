@@ -201,15 +201,15 @@ textarea:focus-visible {
     text-transform: uppercase;
 }
 
-.hero h1,
+.hero h2,
 .section-heading h2 {
-    font-size: clamp(2.4rem, 6vw, 5.7rem);
-    letter-spacing: -0.075em;
+    font-size: 50px;
+    letter-spacing: -0.0099em;
     line-height: 0.96;
 }
 
-.hero h1 {
-    max-width: 780px;
+.hero h2 {
+    max-width: 680px;
 }
 
 .hero-copy {
