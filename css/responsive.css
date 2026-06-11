@@ -93,3 +93,30 @@
         font-size: 2.7rem;
     }
 }
+
+@media (max-width: 980px) {
+    .feature-grid,
+    .dashboard-grid,
+    .page-risk-board {
+        grid-template-columns: 1fr;
+    }
+
+    .home-hero {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 760px) {
+    .page-header {
+        padding-top: 130px;
+    }
+
+    .home-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .module-card {
+        min-height: auto;
+    }
+}
