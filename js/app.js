@@ -29,7 +29,7 @@
     };
 
     const pages = {
-        home: { title: "Professional baggage tracking and risk analysis for airlines.", eyebrow: "Predictive airline baggage intelligence", icon: "fa-satellite-dish" },
+        home: { title: "Baggage tracking and risk analysis for airlines.", eyebrow: "Predictive airline baggage intelligence", icon: "fa-satellite-dish" },
         dashboard: { title: "Real-time baggage control overview.", eyebrow: "Operations dashboard", icon: "fa-gauge-high", copy: "Track the health of baggage operations with KPIs, live status, timeline, risk score, analytics and alerts in one dashboard." },
         tracking: { title: "Search baggage by ID or flight.", eyebrow: "Live baggage tracking", icon: "fa-location-crosshairs", copy: "Use sample IDs BG1024, BG2048, BG4096, BG8192 or flight AI-202 to view live status and journey checkpoints." },
         risk: { title: "Predict delay and mishandling risk.", eyebrow: "Risk analyser", icon: "fa-shield-halved", copy: "The score combines delay minutes, transfer count, scan gaps and route complexity into a passenger-ready action plan." },
